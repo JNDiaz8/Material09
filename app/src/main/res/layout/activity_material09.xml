@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7db3e2"
+    android:orientation="vertical"
+    tools:context=".Material09">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/barra1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#daa986"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        app:subtitleTextAppearance="@style/subtitulo"
+        app:theme="@style/tarjeta"
+        app:titleTextAppearance="@style/titulo">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        app:cardBackgroundColor="#daa986"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/imagen1"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:src="@drawable/cuadro2" />
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
