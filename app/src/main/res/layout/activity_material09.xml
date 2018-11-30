@@ -2,24 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linear1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7db3e2"
     android:orientation="vertical"
     tools:context=".Material09">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/barra1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#daa986"
-        app:popupTheme="@style/Theme.AppCompat.Light"
-        app:subtitleTextAppearance="@style/subtitulo"
-        app:theme="@style/tarjeta"
-        app:titleTextAppearance="@style/titulo">
 
-    </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView
         android:id="@+id/tarjeta"
@@ -30,13 +19,73 @@
         app:cardElevation="10dp"
         app:cardUseCompatPadding="true">
 
-        <ImageView
-            android:id="@+id/imagen1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_toEndOf="@+id/barra1"
-            android:adjustViewBounds="true"
-            android:src="@drawable/cuadro2" />
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/barra1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#daa986"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                app:subtitleTextAppearance="@style/subtitulo"
+                app:theme="@style/tarjeta"
+                app:titleTextAppearance="@style/titulo">
+
+            </android.support.v7.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/imagen1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/barra1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cuadro2" />
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tocado"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Detalle"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:id="@+id/imagen2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/mas" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El rapto de las sabinas es una de las obras más conocidas del pintor neoclásico Jacques Louis David. Realizado en óleo sobre lienzo la obra data de 1799 y actualmente se conserva en el museo del Louvre de París."
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
     </android.support.v7.widget.CardView>
 
