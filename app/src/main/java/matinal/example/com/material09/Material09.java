@@ -18,7 +18,7 @@ public class Material09 extends AppCompatActivity {
 
     private Toolbar toolbar;
     private static final int DURACION = 300;
-    Boolean giro = false;
+    private Boolean giro = false;
     private ImageView icono;
     private LinearLayout detalle;
 
@@ -74,7 +74,7 @@ public class Material09 extends AppCompatActivity {
     private void rotado(Float angulo) {
         Animation animacion = new RotateAnimation(0.0f, angulo, Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
-        animacion.setFillAfter(false);
+        animacion.setFillAfter(true);
         animacion.setDuration(DURACION);
         icono.startAnimation(animacion);
     }
@@ -86,7 +86,7 @@ public class Material09 extends AppCompatActivity {
         giro = false;
         Dinamizador.contrae(detalle, DURACION);
 
-        icono.setImageResource(R.drawable.menos);
+        icono.setImageResource(R.drawable.mas);
         rotado(180.0f);
         giro = true;
         Dinamizador.expande(detalle, DURACION);
