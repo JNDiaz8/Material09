@@ -81,15 +81,15 @@ public class Material09 extends AppCompatActivity {
 
     public void tocado(View view) {
 
-        icono.setImageResource(R.drawable.menos);
-        rotado(-180.0f);
-        giro = false;
-        Dinamizador.contrae(detalle, DURACION);
-
-        icono.setImageResource(R.drawable.mas);
-        rotado(180.0f);
-        giro = true;
-        Dinamizador.expande(detalle, DURACION);
-
+        if(detalle.getVisibility() == View.GONE){
+            Dinamizador.expande(detalle, DURACION);
+            icono.setImageResource(R.drawable.mas);
+            rotado(180.0f);
+        }else{
+            Dinamizador.contrae(detalle, DURACION);
+            icono.setImageResource(R.drawable.menos);
+            rotado(-180.0f);
+        }
+        
     }
 }
